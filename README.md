@@ -79,6 +79,7 @@ Write out the AJAX call that will grab the data and `console.log` the list of ea
 Once you've got the map to show up, your next goal is to drop a single pin on your city. This is a sanity check.  
 - Next, can you add only the first earthquake to the map?
 - Can you add pins for *all* the earthquakes to the map?
+- Finally, can you replace the pin with the `earthquake.png` icon? 
 
 #### Bonus:
 Extend your template:  
