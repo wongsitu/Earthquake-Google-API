@@ -72,6 +72,8 @@ Write out the AJAX call that will grab the data and `console.log` the list of ea
     - Please center your map on your city:
         - Austin:  `{lat: 30.2682, lng: -97.74295}`
         - San Francisco: `{ lat: 37.78, lng: -122.44}`
+        
+        > NOTE: The proper implementation will entail writing your code for Google Maps integration in `app.js` only.  There is no need to alter `index.html` as some resources may recommend.
 
 #### Part 4. Add pins to your map
 Once you've got the map to show up, your next goal is to drop a single pin on your city. This is a sanity check.  
