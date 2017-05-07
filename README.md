@@ -1,5 +1,4 @@
-<img src="https://cloud.githubusercontent.com/assets/7833470/10423298/ea833a68-7079-11e5-84f8-0a925ab96893.png" width="60">
-#GeoQuakes Training
+# <img src="https://cloud.githubusercontent.com/assets/7833470/10423298/ea833a68-7079-11e5-84f8-0a925ab96893.png" width="60"> GeoQuakes Training
 
 ## Introduction
 
@@ -28,7 +27,7 @@ Our goal is to:
 
 Here's a screenshot of what the final product could look like:
 
-![geoquakes](https://cloud.githubusercontent.com/assets/6520345/17942822/c6531b7c-69ed-11e6-9802-80bb3304a941.png)
+![geoquakes](https://cloud.githubusercontent.com/assets/4304660/25784846/9905f872-3339-11e7-92c5-30775b6bb8f4.png)
 
 If your partner forked the repository originally, you should fork their repository **after you finish working together** so that you'll have your own copy of your work to edit in the future. Link your own repo to your personal website.
 
@@ -70,10 +69,14 @@ Write out the AJAX call that will grab the data and `console.log` the list of ea
     - Follow the tutorial at [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial)
         + Note that you would normally need to sign up for an API key, but we've provided one (See `index.html` line 18)
         + Be VERY careful when you copy and paste code!
-    - Please center your map on San Francisco: `{ lat: 37.78, lng: -122.44}`
+    - Please center your map on your city:
+        - Austin:  `{lat: 30.2682, lng: -97.74295}`
+        - San Francisco: `{ lat: 37.78, lng: -122.44}`
+
+        > NOTE: The proper implementation will entail writing your code for Google Maps integration in `app.js` only.  There is no need to alter `index.html` as some resources may recommend.
 
 #### Part 4. Add pins to your map
-Once you've got the map to show up, your next goal is to drop a single pin on San Francisco. This is a sanity check.  
+Once you've got the map to show up, your next goal is to drop a single pin on your city. This is a sanity check.  
 - Next, can you add only the first earthquake to the map?
 - Can you add pins for *all* the earthquakes to the map?
 
@@ -82,3 +85,4 @@ Extend your template:
 - Calculate how long ago the quake occurred and add it to the page. E.g. "28 hours ago". Currently, the time that the API returns is in Unix time (seconds since 1/1/1970). That's a nice format for computers, but not a nice format for humans.
 - Parse the title to only include the location, E.g. Instead of "M 4.2 - 1km ESE of Fontana, California", it should just say "Fontana, California."
 - Create a visual indicator of the magnitude of a quake. For instance, maybe a 4.0 is indicated by a "yellow" dot, a 5.0 by an "orange" dot, and anything larger is "red".
+- Create button that allows us to switch the map from having a 'weekly' view to a 'monthly' view of all quakes. Hint: look through the USGS website to see available endpoints.
