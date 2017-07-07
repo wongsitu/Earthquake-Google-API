@@ -12,7 +12,7 @@ In this training, we attempt to put together much of the work from this week. We
 
 Developers will be able to:
 - Use AJAX to grab data from the USGS earthquakes API
-- Use a template string to display data from an AJAX call on your HTML page
+- Use a template literal to display data from an AJAX call on your HTML page
 - Use the Google Maps API to embed a map
 
 ## GeoQuakes
@@ -64,7 +64,7 @@ Write out the AJAX call that will grab the data and `console.log` the list of ea
 
 > **Pro-tip**: When in doubt, work in your Chrome Javascript Console! You can manipulate JSON, test your ideas, and even render elements to the page without ever touching your `app.js` file!
 
-**Switch to Template Strings**: We encourage you to use template strings. At a certain point it's easier to work with a *template* than to build HTML strings by hand.
+**Switch to Template Literals**: We encourage you to use template liteals (with the `` ` ``). At a certain point it's easier to work with a *template* than to build HTML strings by hand.
 
 #### Part 3. Add Google Maps
 - Your next goal is to integrate Google Maps:
