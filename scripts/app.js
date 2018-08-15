@@ -16,12 +16,16 @@ $(document).ready(function() {
 });
 
 function onSuccess(json) {
+  var mapHere = displayMap();
   for (var i =0;i<json.features.length ;i++){
     var earthquake = json.features[i].properties.title;
-    var lat = json.features[i].geometry.coordinates[0];
+    var lati = json.features[i].geometry.coordinates[0];
     var long = json.features[i].geometry.coordinates[1];
-    $("#info").append(`<p>${earthquake} | Location: ${lat},${long}</p>`);
-    initMap(lat,long);
+    $("#info").append(`<p>${earthquake} | Location: ${lati},${long}</p>`);
+    var coords = {};
+    coords.lat = long;
+    coords.lng = lati;
+    initMap(coords,mapHere);
   }
 }
 
@@ -32,19 +36,23 @@ function onError(xhr, status, errorThrown) {
 	console.dir(xhr);
 }
 
-function initMap(latitude,longitude) {
-  var location = {lat: 37.78, lng: -122.44};
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: location,
-    zoom: 8
-  });
+function initMap(coords,val) {
+  var location = coords;
 
   var marker = new google.maps.Marker({
     position: location,
-    map: map,
-    title: 'Hello World!'
+    map: val,
+    title: 'Hello World!',
+    // icon: "../scripts/images/earthquake.png"
   });
+}
+
+function displayMap(){
+  var mapHere = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 37.78, lng: -122.44},
+    zoom: 3
+  });
+  return mapHere;
 }
 
 });
